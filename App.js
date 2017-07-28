@@ -12,27 +12,27 @@ class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
+      <Image source={require('./assembly-2.png')} style={{width: 193, height:120, marginBottom: 100}}/>
         <Text style={styles.headerText}>Oreyt welcome to Shrapnl.</Text>
         <Text>Your new piggy bank</Text>
-        <Image source={require('./assembly-2.png')} style={{width: 193, height:120, marginTop: 10}}/>
-        <Button
-          onPress= {() => navigate('Profile')}
-          title= 'Go to profile'
-        />
-      </View>
+      <Button
+        onPress= {() => navigate('SignUp')}
+        title= 'Go to profile'
+      />
+    </View>
     );
   }
 }
 
-class ProfileScreen extends React.Component {
+class SignUpScreen extends React.Component {
   static navigationOptions = {
-    title: 'Profile'
+    title: 'Sign Up'
   };
   render() {
     return (
       <View style={styles.container}>
-        <Image source={require('./assembly-2.png')} style={{width: 193, height:120, marginTop: 10}}/>
-        <Text style={styles.headerText}>Hello so and so</Text>
+        <Text style={styles.headerText}>Sign up</Text>
+        <Text>Please enter your details to sign up</Text>
       </View>
     )
   }
@@ -45,13 +45,13 @@ const AppNavigation = () => (
 export default class App extends React.Component {
   render() {
     return (
-        <AppNavigation/>
+      <AppNavigation/>
     );
   }
 }
 const AppNavigator = StackNavigator({
   Home: { screen: HomeScreen },
-  Profile: { screen: ProfileScreen },
+  SignUp: { screen: SignUpScreen },
 });
 
 const styles = StyleSheet.create({
@@ -59,13 +59,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#16ce35',
     alignItems: 'center',
-    justifyContent: 'center',
   },
   headerText: {
     fontFamily: 'Helvetica',
     fontSize: 40,
     textAlign: 'center',
-    justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 });
