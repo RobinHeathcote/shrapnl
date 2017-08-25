@@ -1,7 +1,7 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, Text, View, Image, Button } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Image, Button, Form } from 'react-native';
 import { StackNavigator, } from 'react-navigation';
-import realm from './components/realm'
+import realm from './js/store/realm'
 
 
 
@@ -18,7 +18,7 @@ class HomeScreen extends React.Component {
         <Text>Your new piggy bank</Text>
       <Button
         onPress= {() => navigate('SignUp')}
-        title= 'Go to profile'
+        title= 'Lets add your first budget!'
       />
     </View>
     );
@@ -27,16 +27,17 @@ class HomeScreen extends React.Component {
 
 class SignUpScreen extends React.Component {
   static navigationOptions = {
-    title: 'Sign Up'
+    title: 'Add your Budget'
   };
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.headerText}>Sign up</Text>
-        <Text>Please enter your details to sign up</Text>
+        <Text style={styles.headerText}>New Budget</Text>
+        <Text>Time to add your first budget!</Text>
       </View>
     )
   }
+
 }
 
 const AppNavigation = () => (
@@ -58,7 +59,7 @@ const AppNavigator = StackNavigator({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#16ce35',
+    backgroundColor: '#d9ffb3',
     alignItems: 'center',
   },
   headerText: {
