@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Image, Button } from 'react-native';
 import { StackNavigator, } from 'react-navigation';
+import realm from './components/realm'
 
 
 
@@ -67,3 +68,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+AppRegistry.registerComponent('Shrapnl', () => App);
