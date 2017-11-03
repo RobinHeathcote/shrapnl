@@ -42,7 +42,7 @@ module.system=haste
 
 emoji=true
 
-experimental.strict_type_args=true
+experimental.strict_type_args=false
 
 munge_underscores=true
 
